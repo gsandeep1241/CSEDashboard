@@ -4,7 +4,27 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
   
   def index
+    @users = User.where(activated: true).paginate(page: params[:page])
+  end
+
+  def show
+    @user = User.find(params[:id])
+    redirect_to root_url and return unless User.activated.true
+  end
+  
+  def index
     @users = User.paginate(page: params[:page], per_page: 10)
+  end
+  
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
+    else
+      render 'new'
+    end
   end
   
   def show
@@ -13,17 +33,6 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
-  end
-  
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      log_in @user
-      flash[:success] = "Welcome to CSE Dashboard!"
-      redirect_to @user
-    else
-      render 'new'
-    end
   end
   
   def edit
@@ -73,4 +82,5 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+
 end
