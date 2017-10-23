@@ -9,11 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    redirect_to root_url and return unless User.activated.true
-  end
-  
-  def index
-    @users = User.paginate(page: params[:page], per_page: 10)
+    redirect_to root_url and return unless User.where(activated: true)
   end
   
   def create
@@ -25,10 +21,6 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
-  end
-  
-  def show
-    @user = User.find(params[:id])
   end
   
   def new
