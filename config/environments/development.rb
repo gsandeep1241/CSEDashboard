@@ -1,3 +1,5 @@
+require 'carrierwave/orm/activerecord'
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -54,6 +56,6 @@ Rails.application.configure do
   
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
-  host = 'swe-proj-kmathew96.c9users.io' # Don't use this literally; use your local dev host instead
+  host = 'csedashboard-gskesav.c9users.io' # Don't use this literally; use your local dev host instead
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 end
