@@ -7,6 +7,31 @@
   box-sizing:         border-box;
 }
 
+.navbar-inverse {
+  background-color: #500000;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #FFF;
+}
+
+.btn-primary {
+  background-color: #500000;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #000;
+    border-color: #000; /*set the color you want here*/
+}
+
+img {
+  vertical-align: middle;
+  display: block;
+  margin: auto;
+}
+
+
 body {
   padding-top: 60px;
 }
