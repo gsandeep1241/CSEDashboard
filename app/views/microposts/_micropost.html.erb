@@ -12,4 +12,9 @@
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>
+  <% if !admin_not_tagged? micropost %>
+    <span class "tagdetails">
+      Tagged Admin: <%= link_to User.find(micropost.tag).name, User.find(micropost.tag) %>
+    </span>
+  <% end %>
 </li>

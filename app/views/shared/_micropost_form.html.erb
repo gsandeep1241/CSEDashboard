@@ -1,11 +1,17 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.text_area :content, placeholder: "Compose new post..." %> <%# CHANGESFORTHEDEMO %>
+  </div>
+  <div class="tag_admin">
+    Tag to notify administrator:
+   <%= f.select :tag, 
+   options_for_select(User.select(:name, :id).where(:admin=> true)
+  .map{|c| [ c.name, c.id ] }), {:include_blank => true}  %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
   <span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png,image/jpg' %>
   </span>
 <% end %>
 

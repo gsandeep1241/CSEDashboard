@@ -68,7 +68,8 @@ class User < ApplicationRecord
   end
   
   def feed
-    Micropost.where("user_id = ?", id)
+    #Micropost.where("user_id = ?", id)
+    Micropost.where("user_id IN (?) OR user_id = ?", User.ids, id)
   end
   
   private
@@ -83,6 +84,4 @@ class User < ApplicationRecord
       self.activation_token  = User.new_token
       self.activation_digest = User.digest(activation_token)
     end
-    
-  
 end

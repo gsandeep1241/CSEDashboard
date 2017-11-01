@@ -1,0 +1,82 @@
+temp.txt:4298:app/views/shared/_user_info.html.erb:4:<span><%= pluralize(current_user.microposts.count, "micropost") %></span>
+temp.txt:4305:app/views/microposts/_micropost.html.erb:10:    <% if current_user?(micropost.user) %>
+temp.txt:4315:app/controllers/microposts_controller.rb:6:    @micropost = current_user.microposts.build(micropost_params)
+temp.txt:4322:app/controllers/microposts_controller.rb:29:    @micropost = current_user.microposts.find_by(id: params[:id])
+temp.txt:4324:app/controllers/static_pages_controller.rb:4:      @micropost  = current_user.microposts.build
+test/helpers/sessions_helper_test.rb:10:  test "current_user returns right user when session is nil" do
+test/helpers/sessions_helper_test.rb:11:    assert_equal @user, current_user
+test/helpers/sessions_helper_test.rb:15:  test "current_user returns nil when remember digest is wrong" do
+test/helpers/sessions_helper_test.rb:17:    assert_nil current_user
+log/test.log:3824:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:3834:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:4663:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:4676:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:5947:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:5960:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:8168:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:8181:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:9010:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:9020:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:10104:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:10117:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:12140:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:12153:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:12243:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:12256:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:14112:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:14125:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:15203:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:15216:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:16678:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:16688:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:19178:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:19191:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:20015:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:20028:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:21647:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:21660:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:23463:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:23473:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:24867:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:24880:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:25801:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:25814:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:27397:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:27410:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:28946:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:28956:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:30393:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:30406:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:32196:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:32209:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:34038:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:34051:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:36237:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:36247:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:37814:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:37827:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+log/test.log:38434:SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+log/test.log:38447:SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+grep: input file ‘currentuser.txt’ is also the output
+app/views/layouts/_header.html.erb:15:              <li><%= link_to "Profile", current_user %></li>
+app/views/layouts/_header.html.erb:16:              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+app/views/users/_user.html.erb:4:  <% if current_user.admin? && !current_user?(user) %>
+app/views/shared/_user_info.html.erb:1:<%= link_to gravatar_for(current_user, size: 50), current_user %>
+app/views/shared/_user_info.html.erb:2:<h1><%= current_user.name %></h1>
+app/views/shared/_user_info.html.erb:3:<span><%= link_to "view my profile", current_user %></span>
+app/views/shared/_user_info.html.erb:4:<span><%= pluralize(current_user.microposts.count, "post") %></span>
+app/views/microposts/_micropost.html.erb:10:    <% if current_user?(micropost.user) %>
+app/helpers/sessions_helper.rb:14:    def current_user?(user)
+app/helpers/sessions_helper.rb:15:        user == current_user
+app/helpers/sessions_helper.rb:19:    def current_user
+app/helpers/sessions_helper.rb:21:          @current_user ||= User.find_by(id: user_id)
+app/helpers/sessions_helper.rb:26:            @current_user = user
+app/helpers/sessions_helper.rb:32:        !current_user.nil?
+app/helpers/sessions_helper.rb:44:        forget(current_user)
+app/helpers/sessions_helper.rb:46:        @current_user = nil
+app/controllers/users_controller.rb:62:      redirect_to(root_url) unless current_user?(@user)
+app/controllers/users_controller.rb:67:      redirect_to(root_url) unless current_user.admin?
+app/controllers/microposts_controller.rb:6:    @micropost = current_user.microposts.build(micropost_params)
+app/controllers/microposts_controller.rb:29:    @micropost = current_user.microposts.find_by(id: params[:id])
+app/controllers/static_pages_controller.rb:4:      @micropost  = current_user.microposts.build
+app/controllers/static_pages_controller.rb:5:      @feed_items = current_user.feed.paginate(page: params[:page])
