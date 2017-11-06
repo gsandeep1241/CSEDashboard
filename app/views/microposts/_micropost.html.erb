@@ -17,4 +17,17 @@
       Tagged Admin: <%= link_to User.find(micropost.tag).name, User.find(micropost.tag) %>
     </span>
   <% end %>
+  <% if micropost.comments.any? %>
+    <ul class="comments">
+      <%= render micropost.comments %>
+    </ul>
+  <% end %>
+  <%= form_for(@comment = Comment.new) do |f| %>
+  <div class="comment_box">
+    <%= f.text_area :content, placeholder: "Make a comment..." %> 
+    <%= f.hidden_field :micropost_id, :value => micropost.id %>
+  </div>
+  <%= f.submit "Comment", class: "btn btn-primary" %>
+  
+  <% end %>
 </li>
