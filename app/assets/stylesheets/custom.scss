@@ -11,6 +11,10 @@
   background-color: #500000;
 }
 
+div.h { display: none; 
+  margin-left: 30px;
+}
+
 .navbar-inverse .navbar-nav > li > a {
   color: #FFF;
 }
@@ -38,6 +42,19 @@ body {
 
 section {
   overflow: auto;
+}
+
+#comment-text-area {
+  width: 80%;
+  margin-left: 40px;
+  height: 38px;
+  margin-top: 10px;
+}
+
+#comment-button {
+  width: 90px;
+  margin-top: -12px;
+  margin-left: 526px;
 }
 
 textarea {
