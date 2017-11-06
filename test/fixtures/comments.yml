@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText1
+  user: archer
+  micropost: orange
+  created_at: <%= 10.minutes.ago %>
+
+two:
+  content: MyText2
+  user: lana
+  micropost: orange
+  created_at: <%= 3.years.ago %>
+  
+three:
+  content: MyText3
+  user: michael
+  micropost: orange
+  created_at: <%= 1.years.ago %>  

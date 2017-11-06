@@ -78,4 +78,18 @@ class UserTest < ActiveSupport::TestCase
       @user.destroy
     end
   end
+  
+  test "associated comments should be destroyed" do
+    @user.save
+    @user2 = User.new(name: "Example User2", email: "user22@example.com",
+                     password: "foobar", password_confirmation: "foobar")
+    @user2.save                 
+    @micropost = @user.microposts.create!(content: "Lorem ipsum")
+    @comment = Comment.new(content: "Example User Comment", 
+                     user_id: @user2.id, micropost_id: @micropost.id)
+    @comment.save                 
+    assert_difference 'Comment.count', -1 do
+      @user2.destroy
+    end
+  end
 end
