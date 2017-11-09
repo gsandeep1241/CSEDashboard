@@ -17,7 +17,7 @@
       <%= link_to "delete", micropost, method: :delete,
                                        data: { confirm: "You sure?" } %>
     <% end %>
-    <a href="#" id="show-comment-<%= micropost.id %>" style="float:right">Comments</a>
+    <a href="#" id="show-comment-<%= micropost.id %>" style="float:right"><%= pluralize(micropost.comments.count, "Comment") %></a>
   </span>
   
   
