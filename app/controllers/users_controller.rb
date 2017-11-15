@@ -9,7 +9,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    if current_user == @user
+      @microposts = @user.microposts.paginate(page: params[:page])
+    else
+      @microposts = @user.microposts.where(anony: false).paginate(page: params[:page])
+    end
     redirect_to root_url and return unless User.where(activated: true)
   end
   
