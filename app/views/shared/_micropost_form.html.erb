@@ -1,3 +1,10 @@
+<%= form_tag microposts_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search by content.." %>
+    <%= submit_tag "Search", class: "btn btn-primary", :name => nil %>
+ <% end %>
+ 
+ <br><br><br><br>
+
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
@@ -20,6 +27,11 @@
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png,image/jpg' %>
   </span>
 <% end %>
+
+<br>
+<br>
+
+
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {

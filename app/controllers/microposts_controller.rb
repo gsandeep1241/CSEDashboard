@@ -23,6 +23,13 @@ class MicropostsController < ApplicationController
     @micropost = Micropost.find(params[:id])
   end
   
+  def index
+    str = params["search"].to_str
+    puts str
+    
+    @microposts = Micropost.search(str)
+  end
+  
   private
 
   def micropost_params
@@ -33,4 +40,6 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.find_by(id: params[:id])
     redirect_to root_url if @micropost.nil?
   end
+  
+ 
 end

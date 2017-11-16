@@ -1,0 +1,101 @@
+2017-11-16T02:06:36.064309+00:00 app[web.1]: I, [2017-11-16T02:06:36.064246 #6]  INFO -- : [0a880721-f6e8-466b-9758-61ab8cfea074]   Rendered layouts/_header.html.erb (0.2ms)
+2017-11-16T02:06:36.064715+00:00 app[web.1]: I, [2017-11-16T02:06:36.064644 #6]  INFO -- : [0a880721-f6e8-466b-9758-61ab8cfea074]   Rendered layouts/_footer.html.erb (0.2ms)
+2017-11-16T02:06:36.064996+00:00 app[web.1]: I, [2017-11-16T02:06:36.064927 #6]  INFO -- : [0a880721-f6e8-466b-9758-61ab8cfea074] Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+2017-11-16T02:06:36.067209+00:00 heroku[router]: at=info method=GET path="/" host=secret-gorge-44770.herokuapp.com request_id=0a880721-f6e8-466b-9758-61ab8cfea074 fwd="165.91.13.57" dyno=web.1 connect=3ms service=8ms status=200 bytes=2810 protocol=https
+2017-11-16T02:07:37.669835+00:00 heroku[router]: at=info method=GET path="/signup" host=secret-gorge-44770.herokuapp.com request_id=221b1bc9-27f4-4fc4-b69a-d6cbbe980301 fwd="165.91.13.57" dyno=web.1 connect=0ms service=24ms status=200 bytes=3366 protocol=https
+2017-11-16T02:07:37.649325+00:00 app[web.1]: I, [2017-11-16T02:07:37.649201 #10]  INFO -- : [221b1bc9-27f4-4fc4-b69a-d6cbbe980301] Started GET "/signup" for 165.91.13.57 at 2017-11-16 02:07:37 +0000
+2017-11-16T02:07:37.650612+00:00 app[web.1]: I, [2017-11-16T02:07:37.650541 #10]  INFO -- : [221b1bc9-27f4-4fc4-b69a-d6cbbe980301] Processing by UsersController#new as HTML
+2017-11-16T02:07:37.656613+00:00 app[web.1]: I, [2017-11-16T02:07:37.656508 #10]  INFO -- : [221b1bc9-27f4-4fc4-b69a-d6cbbe980301]   Rendering users/new.html.erb within layouts/application
+2017-11-16T02:07:37.661425+00:00 app[web.1]: I, [2017-11-16T02:07:37.661340 #10]  INFO -- : [221b1bc9-27f4-4fc4-b69a-d6cbbe980301]   Rendered shared/_error_messages.html.erb (0.1ms)
+2017-11-16T02:07:37.664759+00:00 app[web.1]: I, [2017-11-16T02:07:37.664685 #10]  INFO -- : [221b1bc9-27f4-4fc4-b69a-d6cbbe980301]   Rendered users/new.html.erb within layouts/application (8.0ms)
+2017-11-16T02:07:37.665709+00:00 app[web.1]: I, [2017-11-16T02:07:37.665630 #10]  INFO -- : [221b1bc9-27f4-4fc4-b69a-d6cbbe980301]   Rendered layouts/_shim.html.erb (0.1ms)
+2017-11-16T02:07:37.666416+00:00 app[web.1]: I, [2017-11-16T02:07:37.666350 #10]  INFO -- : [221b1bc9-27f4-4fc4-b69a-d6cbbe980301]   Rendered layouts/_header.html.erb (0.4ms)
+2017-11-16T02:07:37.667024+00:00 app[web.1]: I, [2017-11-16T02:07:37.666906 #10]  INFO -- : [221b1bc9-27f4-4fc4-b69a-d6cbbe980301]   Rendered layouts/_footer.html.erb (0.2ms)
+2017-11-16T02:07:37.667420+00:00 app[web.1]: I, [2017-11-16T02:07:37.667353 #10]  INFO -- : [221b1bc9-27f4-4fc4-b69a-d6cbbe980301] Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+2017-11-16T02:07:54.613188+00:00 heroku[router]: at=info method=POST path="/signup" host=secret-gorge-44770.herokuapp.com request_id=1bafed04-b3b6-47d2-9ed6-774c1246bd1a fwd="165.91.13.57" dyno=web.1 connect=0ms service=88ms status=200 bytes=3672 protocol=https
+2017-11-16T02:07:54.525200+00:00 app[web.1]: I, [2017-11-16T02:07:54.525126 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a] Started POST "/signup" for 165.91.13.57 at 2017-11-16 02:07:54 +0000
+2017-11-16T02:07:54.525961+00:00 app[web.1]: I, [2017-11-16T02:07:54.525900 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a] Processing by UsersController#create as HTML
+2017-11-16T02:07:54.526036+00:00 app[web.1]: I, [2017-11-16T02:07:54.525991 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"EfiEhZvTArWbP2IG4HYvJ8mSMAVd5+w6G4kyBsYTDLWdEnxIGgCT1P1jG+L+0DRZwu7FqqL6qFhirTc+RbLgQg==", "user"=>{"name"=>"bjjb", "email"=>"a@b.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+2017-11-16T02:07:54.600323+00:00 app[web.1]: D, [2017-11-16T02:07:54.600207 #10] DEBUG -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+2017-11-16T02:07:54.602593+00:00 app[web.1]: D, [2017-11-16T02:07:54.602524 #10] DEBUG -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "a@b.com"], ["LIMIT", 1]]
+2017-11-16T02:07:54.604260+00:00 app[web.1]: D, [2017-11-16T02:07:54.604189 #10] DEBUG -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+2017-11-16T02:07:54.604845+00:00 app[web.1]: I, [2017-11-16T02:07:54.604773 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   Rendering users/new.html.erb within layouts/application
+2017-11-16T02:07:54.605822+00:00 app[web.1]: I, [2017-11-16T02:07:54.605745 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   Rendered shared/_error_messages.html.erb (0.4ms)
+2017-11-16T02:07:54.608606+00:00 app[web.1]: I, [2017-11-16T02:07:54.608530 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   Rendered users/new.html.erb within layouts/application (3.6ms)
+2017-11-16T02:07:54.609530+00:00 app[web.1]: I, [2017-11-16T02:07:54.609434 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   Rendered layouts/_shim.html.erb (0.1ms)
+2017-11-16T02:07:54.610150+00:00 app[web.1]: I, [2017-11-16T02:07:54.610052 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   Rendered layouts/_header.html.erb (0.4ms)
+2017-11-16T02:07:54.610640+00:00 app[web.1]: I, [2017-11-16T02:07:54.610552 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a]   Rendered layouts/_footer.html.erb (0.2ms)
+2017-11-16T02:07:54.610969+00:00 app[web.1]: I, [2017-11-16T02:07:54.610892 #10]  INFO -- : [1bafed04-b3b6-47d2-9ed6-774c1246bd1a] Completed 200 OK in 85ms (Views: 6.3ms | ActiveRecord: 2.2ms)
+2017-11-16T02:08:02.628034+00:00 app[web.1]: I, [2017-11-16T02:08:02.627947 #6]  INFO -- : [cff61dea-7af6-4be3-b536-ebd72364fad2] Started POST "/signup" for 165.91.13.57 at 2017-11-16 02:08:02 +0000
+2017-11-16T02:08:02.629727+00:00 app[web.1]: I, [2017-11-16T02:08:02.629657 #6]  INFO -- : [cff61dea-7af6-4be3-b536-ebd72364fad2] Processing by UsersController#create as HTML
+2017-11-16T02:08:02.629803+00:00 app[web.1]: I, [2017-11-16T02:08:02.629738 #6]  INFO -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"z93/c4EwPL7hEOyWxzamUP4rtcefK0G7Yfr3oix0jiuafK/4gP9iLOLZ5KjxEIFNZ1l22QRSS+25q/oiLpWmHQ==", "user"=>{"name"=>"bjjb", "email"=>"a@b.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+2017-11-16T02:08:02.704406+00:00 app[web.1]: D, [2017-11-16T02:08:02.704292 #6] DEBUG -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+2017-11-16T02:08:02.708989+00:00 app[web.1]: D, [2017-11-16T02:08:02.708913 #6] DEBUG -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "a@b.com"], ["LIMIT", 1]]
+2017-11-16T02:08:02.783364+00:00 app[web.1]: D, [2017-11-16T02:08:02.783254 #6] DEBUG -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "bjjb"], ["email", "a@b.com"], ["created_at", "2017-11-16 02:08:02.709453"], ["updated_at", "2017-11-16 02:08:02.709453"], ["password_digest", "$2a$10$0ixGmWR8ERkP0IoDvavbbeKGcgS8q1EX3WgaBXBEeFRtH8bOZwya6"], ["activation_digest", "$2a$10$lhbeXThlanNuoi3kYZZ08uh4kGBit.w6F7SenDWwL8VVavCXmnRZi"]]
+2017-11-16T02:08:02.785403+00:00 app[web.1]: D, [2017-11-16T02:08:02.785336 #6] DEBUG -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+2017-11-16T02:08:02.795479+00:00 app[web.1]: I, [2017-11-16T02:08:02.795384 #6]  INFO -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   Rendering user_mailer/account_activation.html.erb within layouts/mailer
+2017-11-16T02:08:02.797273+00:00 app[web.1]: I, [2017-11-16T02:08:02.797194 #6]  INFO -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.6ms)
+2017-11-16T02:08:02.798766+00:00 app[web.1]: I, [2017-11-16T02:08:02.798695 #6]  INFO -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   Rendering user_mailer/account_activation.text.erb within layouts/mailer
+2017-11-16T02:08:02.799427+00:00 app[web.1]: I, [2017-11-16T02:08:02.799340 #6]  INFO -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.5ms)
+2017-11-16T02:08:03.021221+00:00 app[web.1]: D, [2017-11-16T02:08:03.021121 #6] DEBUG -- : [cff61dea-7af6-4be3-b536-ebd72364fad2] UserMailer#account_activation: processed outbound mail in 234.3ms
+2017-11-16T02:08:03.103648+00:00 app[web.1]: I, [2017-11-16T02:08:03.103534 #6]  INFO -- : [cff61dea-7af6-4be3-b536-ebd72364fad2] Sent mail to a@b.com (82.2ms)
+2017-11-16T02:08:03.103720+00:00 app[web.1]: D, [2017-11-16T02:08:03.103635 #6] DEBUG -- : [cff61dea-7af6-4be3-b536-ebd72364fad2] Date: Thu, 16 Nov 2017 02:08:03 +0000
+2017-11-16T02:08:03.103722+00:00 app[web.1]: From: noreply@example.com
+2017-11-16T02:08:03.103722+00:00 app[web.1]: To: a@b.com
+2017-11-16T02:08:03.103723+00:00 app[web.1]: Message-ID: <5a0cf3036930_61f030c4145a@31bd640b-0d32-4646-bf43-92fc8f65d6c9.mail>
+2017-11-16T02:08:03.103723+00:00 app[web.1]: Subject: Account activation
+2017-11-16T02:08:03.103724+00:00 app[web.1]: Mime-Version: 1.0
+2017-11-16T02:08:03.103725+00:00 app[web.1]: Content-Type: multipart/alternative;
+2017-11-16T02:08:03.103726+00:00 app[web.1]:  boundary="--==_mimepart_5a0cf3034e1d_61f030c4144fd";
+2017-11-16T02:08:03.103726+00:00 app[web.1]:  charset=UTF-8
+2017-11-16T02:08:03.103727+00:00 app[web.1]: Content-Transfer-Encoding: 7bit
+2017-11-16T02:08:03.103727+00:00 app[web.1]: 
+2017-11-16T02:08:03.103727+00:00 app[web.1]: 
+2017-11-16T02:08:03.103728+00:00 app[web.1]: ----==_mimepart_5a0cf3034e1d_61f030c4144fd
+2017-11-16T02:08:03.103731+00:00 app[web.1]: Content-Type: text/plain;
+2017-11-16T02:08:03.103731+00:00 app[web.1]:  charset=UTF-8
+2017-11-16T02:08:03.103732+00:00 app[web.1]: Content-Transfer-Encoding: 7bit
+2017-11-16T02:08:03.103732+00:00 app[web.1]: 
+2017-11-16T02:08:03.103732+00:00 app[web.1]: Hi bjjb,
+2017-11-16T02:08:03.103733+00:00 app[web.1]: 
+2017-11-16T02:08:03.103733+00:00 app[web.1]: Welcome to the CSE-Dashboard! Click on the link below to activate your account:
+2017-11-16T02:08:03.103733+00:00 app[web.1]: 
+2017-11-16T02:08:03.103734+00:00 app[web.1]: https://polar-harbor-52142.herokuapp.com/account_activations/nKs-dby00xPGBYkxlBcceA/edit?email=a%40b.com
+2017-11-16T02:08:03.103735+00:00 app[web.1]: 
+2017-11-16T02:08:03.103735+00:00 app[web.1]: Content-Type: text/html;
+2017-11-16T02:08:03.103736+00:00 app[web.1]:  charset=UTF-8
+2017-11-16T02:08:03.103736+00:00 app[web.1]: Content-Transfer-Encoding: 7bit
+2017-11-16T02:08:03.103737+00:00 app[web.1]: 
+2017-11-16T02:08:03.103737+00:00 app[web.1]: <!DOCTYPE html>
+2017-11-16T02:08:03.103738+00:00 app[web.1]: <html>
+2017-11-16T02:08:03.103738+00:00 app[web.1]:   <head>
+2017-11-16T02:08:03.103739+00:00 app[web.1]:     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+2017-11-16T02:08:03.103739+00:00 app[web.1]:     <style>
+2017-11-16T02:08:03.103739+00:00 app[web.1]:       /* Email styles need to be inline */
+2017-11-16T02:08:03.103740+00:00 app[web.1]:     </style>
+2017-11-16T02:08:03.103740+00:00 app[web.1]:   </head>
+2017-11-16T02:08:03.103740+00:00 app[web.1]: 
+2017-11-16T02:08:03.103741+00:00 app[web.1]:   <body>
+2017-11-16T02:08:03.103741+00:00 app[web.1]:     <h1>CSE-Dashboard</h1>
+2017-11-16T02:08:03.103741+00:00 app[web.1]: 
+2017-11-16T02:08:03.103735+00:00 app[web.1]: ----==_mimepart_5a0cf3034e1d_61f030c4144fd
+2017-11-16T02:08:03.103742+00:00 app[web.1]: <p>Hi bjjb,</p>
+2017-11-16T02:08:03.103742+00:00 app[web.1]: 
+2017-11-16T02:08:03.103742+00:00 app[web.1]: <p>
+2017-11-16T02:08:03.103743+00:00 app[web.1]: Welcome to the CSE-Dashboard! Click on the link below to activate your account:
+2017-11-16T02:08:03.103743+00:00 app[web.1]: </p>
+2017-11-16T02:08:03.103743+00:00 app[web.1]: 
+2017-11-16T02:08:03.103744+00:00 app[web.1]: <a href="https://polar-harbor-52142.herokuapp.com/account_activations/nKs-dby00xPGBYkxlBcceA/edit?email=a%40b.com">Activate</a>
+2017-11-16T02:08:03.103745+00:00 app[web.1]: </html>
+2017-11-16T02:08:03.103744+00:00 app[web.1]:   </body>
+2017-11-16T02:08:03.103745+00:00 app[web.1]: 
+2017-11-16T02:08:03.103745+00:00 app[web.1]: ----==_mimepart_5a0cf3034e1d_61f030c4144fd--
+2017-11-16T02:08:03.103746+00:00 app[web.1]: 
+2017-11-16T02:08:03.103990+00:00 app[web.1]: I, [2017-11-16T02:08:03.103929 #6]  INFO -- : [cff61dea-7af6-4be3-b536-ebd72364fad2] Completed 500 Internal Server Error in 474ms (ActiveRecord: 6.4ms)
+2017-11-16T02:08:03.104513+00:00 app[web.1]: F, [2017-11-16T02:08:03.104453 #6] FATAL -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   
+2017-11-16T02:08:03.104577+00:00 app[web.1]: F, [2017-11-16T02:08:03.104519 #6] FATAL -- : [cff61dea-7af6-4be3-b536-ebd72364fad2] Net::SMTPFatalError (550 Unauthenticated senders not allowed
+2017-11-16T02:08:03.104579+00:00 app[web.1]: ):
+2017-11-16T02:08:03.104635+00:00 app[web.1]: F, [2017-11-16T02:08:03.104577 #6] FATAL -- : [cff61dea-7af6-4be3-b536-ebd72364fad2]   
+2017-11-16T02:08:03.104700+00:00 app[web.1]: F, [2017-11-16T02:08:03.104648 #6] FATAL -- : [cff61dea-7af6-4be3-b536-ebd72364fad2] app/models/user.rb:50:in `send_activation_email'
+2017-11-16T02:08:03.104701+00:00 app[web.1]: [cff61dea-7af6-4be3-b536-ebd72364fad2] app/controllers/users_controller.rb:18:in `create'
+2017-11-16T02:08:03.109645+00:00 heroku[router]: at=info method=POST path="/signup" host=secret-gorge-44770.herokuapp.com request_id=cff61dea-7af6-4be3-b536-ebd72364fad2 fwd="165.91.13.57" dyno=web.1 connect=0ms service=482ms status=500 bytes=1891 protocol=https
