@@ -9,7 +9,16 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
+        <% form_tag microposts_path, :method => 'get' do %>
+  
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  
+    <% end %>
     <%= render 'layouts/header' %>
+    
+
+    
     <div class="container">
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
