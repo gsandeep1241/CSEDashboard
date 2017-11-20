@@ -5,7 +5,11 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = "Post created!"
+      if @micropost.anony
+          flash[:success] = "Post created anonymously. However, you are being watched!"
+      else
+        flash[:success] = "Post created!"
+      end
       redirect_to root_url
     else
       @feed_items = []
@@ -15,8 +19,6 @@ class MicropostsController < ApplicationController
   
   def update
     @micropost = Micropost.find(params[:id])
-    puts params[:id]
-    puts "strfsd"
     if @micropost.update_attributes(micropost_params)
       # Handle a successful update.
       flash[:success] = "Post successfully updated!"
@@ -36,7 +38,6 @@ class MicropostsController < ApplicationController
   
   def index
     str = params["search"].to_str
-    
     @microposts = Micropost.search(str)
   end
 
@@ -52,5 +53,4 @@ class MicropostsController < ApplicationController
     redirect_to root_url if @micropost.nil?
   end
   
- 
 end
