@@ -36,6 +36,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
+  def pending
+    if params[:filter]
+      @pending_posts = Micropost.where("tag like '?%' ", current_user.id).where(resolved: false)
+    else
+      @pending_posts = Micropost.where("tag like '?%' ", current_user.id)
+    end
+  end
+  
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)

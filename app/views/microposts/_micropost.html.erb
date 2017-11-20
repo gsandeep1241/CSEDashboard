@@ -11,10 +11,12 @@
     <% end %>
   </span>
     
-  <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
-  <% if !micropost.anony %>
+  
+  <% if (!micropost.anony && micropost.anony==false) %>
+    <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
     <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <% else %>
+   <%= link_to image_tag("vendetta.jpg", size: "50x50", class: "gravatar", :alt => "I am MASKED!"), anony_path %>
     <span class="user">Anonymous</span>
   <% end %>
   
