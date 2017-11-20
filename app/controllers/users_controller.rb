@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if current_user == @user
       @microposts = @user.microposts.paginate(page: params[:page])
     else
-      @microposts = @user.microposts.where(anony: false).paginate(page: params[:page])
+      @microposts = @user.microposts.where(:anony => [false, nil]).paginate(page: params[:page])
     end
     redirect_to root_url and return unless User.where(activated: true)
   end
