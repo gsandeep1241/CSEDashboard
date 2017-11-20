@@ -12,6 +12,17 @@ class MicropostsController < ApplicationController
       render 'static_pages/home'
     end
   end
+  
+  def update
+    @micropost = Micropost.find(params[:id])
+    puts params[:id]
+    puts "strfsd"
+    if @micropost.update_attributes(micropost_params)
+      # Handle a successful update.
+      flash[:success] = "Post successfully updated!"
+      redirect_back fallback_location: root_path
+    end
+  end
 
   def destroy
     @micropost.destroy
@@ -25,15 +36,15 @@ class MicropostsController < ApplicationController
   
   def index
     str = params["search"].to_str
-    puts str
     
     @microposts = Micropost.search(str)
   end
+
   
   private
 
   def micropost_params
-    params.require(:micropost).permit(:content, :picture, :tag, :anony)
+    params.require(:micropost).permit(:content, :picture, :tag, :anony, :resolved)
   end
   
   def correct_user
