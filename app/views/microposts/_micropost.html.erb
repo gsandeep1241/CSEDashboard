@@ -1,10 +1,23 @@
 <li id="micropost-<%= micropost.id %>">
+  <span>
+    <% if correct_user? current_user, micropost %>
+    
+      <%= form_for(micropost) do |f|  %>
+        <div class="form-inline" style="font-weight:normal; margin-left: 60px; float: right">
+          <%= f.check_box :resolved, class: 'form-control', :onchange => "this.form.submit();" %>
+          <%= f.label :resolved, "Resolved", style: 'font-weight:normal' %>
+        </div>
+      <% end %>
+    <% end %>
+  </span>
+    
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
   <% if !micropost.anony %>
     <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <% else %>
     <span class="user">Anonymous</span>
   <% end %>
+  
   <span class="content">
     <%= micropost.content %>
     <%= image_tag micropost.picture.url if micropost.picture? %>
@@ -13,6 +26,9 @@
     <span class "tagdetails">
       Tagged Admin: <%= link_to User.find(micropost.tag).name, User.find(micropost.tag) %>
     </span>
+    
+    
+  
   <% end %>
   <span class="timestamp">
     <%= link_to "Posted", micropost %> <%= time_ago_in_words(micropost.created_at) %> ago.
@@ -32,11 +48,11 @@
     </ul>
   <% end %>
   <%= form_for(@comment = Comment.new) do |f| %>
-  <div class="cb">
-    <span> <%=  f.text_area :content, placeholder: "Make a comment...", id: 'comment-text-area'  %> </span>
-    <%= f.hidden_field :micropost_id, :value => micropost.id %>
-  </div>
-  <span><%= f.submit "Comment", class: "btn btn-primary", id: 'comment-button' %></span>
+    <div class="cb">
+      <span> <%=  f.text_area :content, placeholder: "Make a comment...", id: 'comment-text-area'  %> </span>
+      <%= f.hidden_field :micropost_id, :value => micropost.id %>
+    </div>
+    <span><%= f.submit "Comment", class: "btn btn-primary", id: 'comment-button' %></span>
   <% end %>
   </div>
 </li>
@@ -48,7 +64,11 @@
     event.preventDefault();
     $('div#comment-'+mid).toggle();
   });
+  
 });
+
+
+  
 </script>
 
 

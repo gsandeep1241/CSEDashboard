@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(comment_params)
     if @comment.save
       flash[:success] = "Comment successful!"
-      redirect_to root_url
+      redirect_back fallback_location: root_path
     else
       flash[:danger] = "Comment too big or too small!"
       @feed_items = []

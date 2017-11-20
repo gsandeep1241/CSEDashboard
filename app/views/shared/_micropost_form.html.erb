@@ -13,7 +13,7 @@
   
 <div class="form-inline" style="font-weight:normal;">
     <%= f.check_box :anony, class: 'form-control', value: false %>
-    <%= f.label :anony, "Post Anonymous" %>
+    <%= f.label :anony, "Post Anonymous", style: 'font-weight:normal' %>
 </div>
 
   <div class="tag_admin">
@@ -27,11 +27,6 @@
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png,image/jpg' %>
   </span>
 <% end %>
-
-<br>
-<br>
-
-
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {
