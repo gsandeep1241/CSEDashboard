@@ -38,7 +38,6 @@ class UsersController < ApplicationController
   
   def pending
     if params[:filter]
-      puts "hello"
       @pending_posts = Micropost.where("tag like '?%' ", current_user.id).where(:resolved => [nil, false])
     else
       @pending_posts = Micropost.where("tag like '?%' ", current_user.id)
