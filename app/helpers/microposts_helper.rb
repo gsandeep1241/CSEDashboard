@@ -4,6 +4,6 @@ module MicropostsHelper
     end
     
     def correct_user?(user, post)
-        post.tag.to_i == user.id
+        user != nil && post.tag.to_i == user.id
     end
 end
