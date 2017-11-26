@@ -41,11 +41,20 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^the post is set up$/ do
+  Micropost.create!({:content => 'New content',
+                      :user_id => 3334,
+                      :tag => 3334
+                      });
+end
+
 Given /^the app is set up$/ do
   
   User.create!({:name => 'admin',
                 :email => 'admin@admin.com',
                 :password => 'foobar',
+                :admin => true,
+                :id => 3334,
                 :activated => true});
   User.create!({:name => 'user1',
                 :email => 'user1@user.com',
@@ -78,6 +87,10 @@ end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
+end
+
+When /^(?:|I )check "([^"]*)"$/ do |field|
+find("input[type='checkbox'][id='#{field.downcase}']").set(true)
 end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
