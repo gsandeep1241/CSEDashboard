@@ -41,6 +41,25 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^the app is set up$/ do
+  
+  User.create!({:name => 'admin',
+                :email => 'admin@admin.com',
+                :password => 'foobar',
+                :activated => true})
+end
+
+And /^I am logged in$/ do
+  visit '/login'
+  fill_in 'session_email', :with => 'admin@admin.com'
+  fill_in 'session_password', :with => 'foobar'
+  click_button 'Log in'
+end
+
+When /^(?:|I )follow "([^"]*)"$/ do |link|
+  click_link(link)
+end
+
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field, :with => value)
 end
