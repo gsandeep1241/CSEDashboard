@@ -46,7 +46,19 @@ Given /^the app is set up$/ do
   User.create!({:name => 'admin',
                 :email => 'admin@admin.com',
                 :password => 'foobar',
-                :activated => true})
+                :activated => true});
+  User.create!({:name => 'user1',
+                :email => 'user1@user.com',
+                :password => 'user1111',
+                :activated => true});
+  User.create!({:name => 'user2',
+                :email => 'user2@user.com',
+                :password => 'user2222',
+                :activated => true});
+  User.create!({:name => 'user3',
+                :email => 'user3@user.com',
+                :password => 'user3333',
+                :activated => true});           
 end
 
 And /^I am logged in$/ do
@@ -83,5 +95,13 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
     page.should have_xpath('//*', :text => regexp)
   else
     assert page.has_xpath?('//*', :text => regexp)
+  end
+end
+
+Then /^(?:|I )should not see "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should have_no_content(text)
+  else
+    assert page.has_no_content?(text)
   end
 end
