@@ -15,6 +15,38 @@ User.create!(name:  "Super_User",
              activated: true,
              activated_at: Time.zone.now)
 
+User.create!(name:  "CSEGSA",
+             email: "csegsa@user.com",
+             password:              "superuser",
+             password_confirmation: "superuser",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+User.create!(name:  "TAMU_Hack",
+             email: "tamuhack@user.com",
+             password:              "superuser",
+             password_confirmation: "superuser",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+User.create!(name:  "Aggie_Coding_Club",
+             email: "aggiecodingclub@user.com",
+             password:              "superuser",
+             password_confirmation: "superuser",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+User.create!(name:  "Cyber_Security_Club",
+             email: "cybersecurityclub@user.com",
+             password:              "superuser",
+             password_confirmation: "superuser",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
 # 99.times do |n|
 #   name  = Faker::Name.name
 #   email = "example-#{n+1}@railstutorial.org"
