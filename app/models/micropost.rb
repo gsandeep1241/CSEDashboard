@@ -10,8 +10,7 @@ class Micropost < ApplicationRecord
   
   def self.search(search)
   if search
-    #Micropost.where("content like ?", "%#{@search}%")
-    Micropost.where('content LIKE ?', "%#{search}%")
+    Micropost.where('lower(content) LIKE ?', "%#{search}%")
   else
     Micropost.all
   end
