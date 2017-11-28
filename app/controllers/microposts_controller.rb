@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      if @micropost.anony
+      if (@micropost.anony && current_user.id != 1)
           flash[:success] = "Post created anonymously. However, you are being watched!"
       else
         flash[:success] = "Post created!"

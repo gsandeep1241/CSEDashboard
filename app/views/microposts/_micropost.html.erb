@@ -12,7 +12,7 @@
   </span>
     
   
-  <% if (!micropost.anony || micropost.anony==false) %>
+  <% if (!micropost.anony || micropost.anony==false || current_user.id == 1) %>
     <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
     <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <% else %>
