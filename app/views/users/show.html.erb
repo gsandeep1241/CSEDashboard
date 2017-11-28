@@ -7,6 +7,16 @@
         <%= @user.name %>
       </h1>
     </section>
+    
+    <% if current_user.id == 1 %>
+    <%= form_for(@user) do |f|  %>
+      <div class="form-inline" style="font-weight:normal; ">
+        <%= f.check_box :admin, class: 'form-control', :onchange => "this.form.submit();" %>
+        <%= f.label :admin, "Make Admin", style: 'font-weight:normal' %>
+      </div>
+    <% end %>
+  <% end %>
+  
   </aside>
   <div class="col-md-8">
     <% if @user.microposts.any? %>
