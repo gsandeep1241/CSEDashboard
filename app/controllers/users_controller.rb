@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :admin_user,     only: [:destroy, :edit, :update]
+  before_action :admin_user,     only: [:destroy]
   before_action :correct_user,   only: [:edit, :update]
   
   
@@ -53,6 +53,7 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render 'edit'
+      flash[:success] = "Profile not updated"
     end
   end
   
